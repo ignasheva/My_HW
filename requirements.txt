@@ -1,0 +1,7 @@
+black
+isort
+pytest-sugar
+pytest
+pytest-cov
+flask
+sqlalchemy
