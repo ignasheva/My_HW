@@ -1,4 +1,5 @@
 import pytest
+
 from homework1.task4 import check_sum_of_four
 
 
@@ -16,8 +17,9 @@ def test_only_positive_lists():
 def test_only_negative_lists():
     """Testing that actual not empty lists
     with only negative numbers give 0 tuples"""
-    assert check_sum_of_four([-3, -4, -1], [-2, -5, -3],
-                             [-6, -2, -7], [-8, -4, -1]) == 0
+    assert (
+        check_sum_of_four([-3, -4, -1], [-2, -5, -3], [-6, -2, -7], [-8, -4, -1]) == 0
+    )
 
 
 def test_lists_with_different_values():

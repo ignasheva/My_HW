@@ -22,7 +22,7 @@ def is_fib(number):
 
 def check_fibonacci(data: Sequence[int]) -> bool:
     flag = True
-    assert len(data) >= 3, 'Not enough values in sequence'
+    assert len(data) >= 3, "Not enough values in sequence"
     a, b, c = data[0], data[1], data[2]
     while data and flag:
         if not _check_window(a, b, c):

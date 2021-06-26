@@ -1,4 +1,5 @@
 import pytest
+
 from homework1.calculator import check_power_of_2
 
 
