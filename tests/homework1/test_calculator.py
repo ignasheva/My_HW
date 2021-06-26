@@ -14,9 +14,9 @@ def test_negative_case():
 
 def test_zero_case():
     """Testing that the zero in powers of 2 give True"""
-    assert check_power_of_2(0)
+    assert not check_power_of_2(0)
 
 
 def test_negative_case_with_negative_meaning():
     """Testing that negative meaning give False"""
-    assert check_power_of_2(-16)
+    assert not check_power_of_2(-16)

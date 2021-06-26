@@ -11,4 +11,4 @@ def test_hard_fib_sequence():
 
 
 def test_not_fib_sequence():
-    assert check_fibonacci([3, 4, 7, 11])
+    assert check_fibonacci([3, 4, 7, 11]) == False
