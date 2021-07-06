@@ -1,4 +1,5 @@
 import pytest
+
 from homework3.task1 import cache
 
 

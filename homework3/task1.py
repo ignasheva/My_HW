@@ -8,17 +8,16 @@ def cache(times) -> Callable:
         def cache_f(*args):
             if args in cache:
                 cached = cache[args]
-                if (cached['times'] > 1):
-                    cache[args]['times'] -= 1
-                    return cached['result']
+                if cached["times"] > 1:
+                    cache[args]["times"] -= 1
+                    return cached["result"]
                 else:
-                    return cache.pop(args)['result']
+                    return cache.pop(args)["result"]
 
             result = func(*args)
-            cache[args] = {'result': result, 'times': times}
+            cache[args] = {"result": result, "times": times}
             return result
 
         return cache_f
 
     return decorator
-
