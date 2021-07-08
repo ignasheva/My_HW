@@ -3,5 +3,6 @@ isort
 pytest-sugar
 pytest
 pytest-cov
+requests
 flask
 sqlalchemy
