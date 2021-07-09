@@ -2,17 +2,13 @@ from typing import List
 
 
 def find_maximal_sub_array_sum(nums: List[int], k: int) -> int:
-    lists = [[]]
-    for i in range(len(nums) + 1):
-        for j in range(i):
-            lists.append(nums[j:i])
-
-    total = 0
-    for i in lists:
-        if len(i) <= k:
-            next = sum(i)
-            if next > total:
-                total = next
-        else:
-            continue
-    return total
+    variants = []
+    [
+        variants.append(nums[j:i])
+        for i in range(len(nums) + 1)
+        for j in range(i)
+        if len(nums[j:i]) <= k
+    ]
+    sum_array = []
+    [sum_array.append(sum(i)) for i in variants]
+    return max(sum_array)
