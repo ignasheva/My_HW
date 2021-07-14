@@ -1,5 +1,6 @@
 black
 isort
+json
 pytest-sugar
 pytest
 pytest-cov

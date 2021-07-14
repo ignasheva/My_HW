@@ -1,4 +1,4 @@
-from typing import Sequence, Generator
+from typing import Generator, Sequence
 
 
 def is_fib(start: int) -> Generator[int, None, None]:
