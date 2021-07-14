@@ -1,7 +1,7 @@
-from typing import Sequence
+from typing import Sequence, Generator
 
 
-def is_fib(start):
+def is_fib(start: int) -> Generator[int, None, None]:
     fib1, fib2 = 0, 1
     while True:
         if fib1 >= start:
