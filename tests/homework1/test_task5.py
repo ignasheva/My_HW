@@ -7,7 +7,7 @@ from homework1.task5 import find_maximal_sub_array_sum
 
 @pytest.fixture()
 def get_data():
-    with open("data_for_test_task5.json") as file:
+    with open("tests/homework1/data_for_test_task5.json") as file:
         data = json.loads(file.read())
     return data
 

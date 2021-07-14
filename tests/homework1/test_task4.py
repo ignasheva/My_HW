@@ -7,7 +7,7 @@ from homework1.task4 import check_sum_of_four
 
 @pytest.fixture()
 def get_data():
-    with open("data_for_test_task4.json") as file:
+    with open("tests/homework1/data_for_test_task4.json") as file:
         data = json.loads(file.read())
     return data
 
