@@ -1,23 +1,17 @@
+import json
+
 import pytest
 
 from homework2.task3 import combinations
 
 
-def test_2_lists_with_2_items():
-    assert combinations([1, 2], [3, 4]) == [
-        [1, 3],
-        [1, 4],
-        [2, 3],
-        [2, 4],
-    ]
+@pytest.fixture()
+def get_data():
+    with open("tests/homework2/data_for_test_task3.json") as file:
+        data = json.loads(file.read())
+    return data
 
 
-def test_3_lists_with_different_lengths():
-    assert combinations([1, 2, 3], [4, 5], [6]) == [
-        [1, 4, 6],
-        [1, 5, 6],
-        [2, 4, 6],
-        [2, 5, 6],
-        [3, 4, 6],
-        [3, 5, 6],
-    ]
+def test_lists_with_different_lengths(get_data):
+    for d in get_data:
+        assert combinations(*d[0]) == d[1]

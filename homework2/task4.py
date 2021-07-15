@@ -1,7 +1,7 @@
 from typing import Callable
 
 
-def func(a, b):
+def func(a: int, b: int) -> int:
     return (a ** b) ** 2
 
 
