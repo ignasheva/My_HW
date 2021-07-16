@@ -14,4 +14,4 @@ def get_data():
 
 def test_maximal_sub_array_sum_with_length_less_equal_to_k(get_data):
     for d in get_data:
-        assert find_maximal_sub_array_sum(d[0], d[1]) == d[2]
+        assert find_maximal_sub_array_sum(d["nums"], d["k"]) == d["result"]

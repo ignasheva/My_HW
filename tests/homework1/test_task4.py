@@ -14,4 +14,4 @@ def get_data():
 
 def test_sum_of_four_lists_with_different_values(get_data):
     for d in get_data:
-        assert check_sum_of_four(d[0], d[1], d[2], d[3]) == d[4]
+        assert check_sum_of_four(d["a"], d["b"], d["c"], d["d"]) == d["result"]

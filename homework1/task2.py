@@ -10,6 +10,7 @@ def is_fib(start: int) -> Generator[int, None, None]:
 
 
 def check_fibonacci(data: Sequence[int]) -> bool:
+    data = list(data) if type(data) is not list else data
     if data[0] == 1 and data[1] == 2:
         data.insert(0, 1)
     for value, fib in zip(data, is_fib(data[0])):
