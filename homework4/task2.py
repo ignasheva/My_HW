@@ -3,7 +3,7 @@ from collections import Counter
 import requests
 
 
-def process_response(url):
+def process_response(url: str) -> int:
     try:
         r = requests.get(url)
     except requests.exceptions.RequestException:
