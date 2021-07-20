@@ -1,4 +1,4 @@
-from typing import List, Callable, Dict
+from typing import Callable, Dict, List
 
 
 class Filter:
