@@ -16,5 +16,7 @@ def cache(times: int) -> Callable:
             result = func(*args)
             cache[args] = {"result": result, "times": times}
             return result
+
         return cache_f
+
     return decorator
