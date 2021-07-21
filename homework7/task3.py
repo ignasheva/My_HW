@@ -8,5 +8,4 @@ def tic_tac_toe_checker(board: List[List]) -> str:
         for row in lines:
             if row[0] in ("o", "x") and all(row[0] == value for value in row):
                 return f"{row[0]} wins!"
-
     return "unfinished!" if any("-" in row for row in board) else "draw!"
